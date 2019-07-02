@@ -14,7 +14,7 @@ ffi.cdef[[
 	char * strerror(int errnum);
 ]]
 
-function encode_base58( input )
+local function encode_base58( input )
 	local newsize = math.floor(#input*3/2)+1
 	-- print("newsize = ",newsize)
 	local out
@@ -39,7 +39,7 @@ function encode_base58( input )
  	end
 end
 
-function decode_base58( input )
+local function decode_base58( input )
 	local newsize = math.floor(#input*4/3+1)
 	-- print("newsize = ",newsize)
 	local out
