@@ -1,8 +1,9 @@
 local ffi = require 'ffi'
 -- local uuid = require 'uuid'
 
-
-local lib = ffi.load(package.searchpath('libbase58', package.cpath), true)
+local libpath = package.search and package.search('libbase58')
+	or assert(package.searchpath('libbase58', package.cpath))
+local lib = ffi.load(libpath, true)
 local GENBUF = 256
 
 local genbuf = ffi.new('char[?]',GENBUF)
