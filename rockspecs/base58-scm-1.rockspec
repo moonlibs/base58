@@ -2,7 +2,7 @@ package = 'base58'
 version = 'scm-1'
 
 source  = {
-    url    = 'git://github.com/moonlibs/base58.git';
+    url    = 'git+https://github.com/moonlibs/base58.git';
     branch = 'master';
 }
 
